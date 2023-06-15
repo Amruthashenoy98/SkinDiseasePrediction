@@ -113,7 +113,7 @@ class ModelTrainer:
                 obj=best_model
             )
 
-            predicted=best_model.predict(X_test)
+            predicted=best_model.predict(X_test) 
 
             f1score = f1_score(y_test, predicted,average='weighted')
             return best_model_name,f1score
