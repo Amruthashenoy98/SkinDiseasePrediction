@@ -1,0 +1,431 @@
+<html>
+<body>
+    <div class="login">
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Skin Disease Predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">erythema</label>
+            <select class="form-control"  name="erythema" placeholder="Enter erythema level" required>
+                <option class="placeholder" selected disabled value="">Select erythema level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">scaling</label>
+            <select class="form-control" name="scaling" placeholder="Enter scaling level" required>
+                <option class="placeholder" selected disabled value="">Select scaling level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">definite borders</label>
+            <select class="form-control" name="definite_borders"
+                placeholder="Enter definite borders level" required>
+                <option class="placeholder" selected disabled value="">Select definite borders level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Itching</label>
+            <select class="form-control" name="itching"
+                placeholder="Enter itching level" required>
+                <option class="placeholder" selected disabled value="">Select itching level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">koebner phenomenon</label>
+            <select class="form-control" name="koebner_phenomenon" placeholder="Enter koebner phenomenon level" required>
+                <option class="placeholder" selected disabled value="">Select koebner phenomenon level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">follicular papules</label>
+            <select class="form-control" name="follicular_papules" placeholder="Enter follicular papules level"
+                required>
+                <option class="placeholder" selected disabled value="">Select follicular papules level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">knee and elbow involvement</label>
+            <select class="form-control" name="knee_and_elbow_involvement" placeholder="Enter knee and elbow involvement level"
+                required>
+                <option class="placeholder" selected disabled value="">Select knee and elbow involvement level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">scalp involvement</label>
+            <select class="form-control" name="scalp_involvement" placeholder="Enter scalp involvement level"
+                required>
+                <option class="placeholder" selected disabled value="">Select scalp involvement level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">family history</label>
+            <select class="form-control" name="family_history" placeholder="Enter family history"
+                required>
+                <option class="placeholder" selected disabled value="">Select Family history</option>
+                <option value="0">
+                    Yes
+                </option>
+                <option value="1">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">eosinophils in the infiltrate</label>
+            <select class="form-control" name="eosinophils_in_the_infiltrate" placeholder="Enter eosinophils in the infiltrate level"
+                required>
+                <option class="placeholder" selected disabled value="">Select eosinophils in the infiltrate level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PNL infiltrate</label>
+            <select class="form-control" name="PNL_infiltrate" placeholder="Enter PNL infiltrate level"
+                required>
+                <option class="placeholder" selected disabled value="">Select PNL infiltrate level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fibrosis of the papillary dermis</label>
+            <select class="form-control" name="fibrosis_of_the_papillary_dermis" placeholder="Enter fibrosis of the papillary dermis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select fibrosis of the papillary dermis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">exocytosis</label>
+            <select class="form-control" name="exocytosis" placeholder="Enter exocytosis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select exocytosis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">acanthosis</label>
+            <select class="form-control" name="acanthosis" placeholder="Enter acanthosis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select acanthosis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">hyperkeratosis</label>
+            <select class="form-control" name="hyperkeratosis" placeholder="Enter hyperkeratosis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select hyperkeratosis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">parakeratosis</label>
+            <select class="form-control" name="parakeratosis" placeholder="Enter parakeratosis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select parakeratosis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">elongation of the rete ridges</label>
+            <select class="form-control" name="elongation_of_the_rete_ridges" placeholder="Enter elongation of the rete ridges level"
+                required>
+                <option class="placeholder" selected disabled value="">Select elongation of the rete ridges level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">spongiform pustule</label>
+            <select class="form-control" name="spongiform_pustule" placeholder="Enter spongiform pustule level"
+                required>
+                <option class="placeholder" selected disabled value="">Select spongiform pustule level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> munro microabcess</label>
+            <select class="form-control" name="munro_microabcess" placeholder="Enter munro microabcess level"
+                required>
+                <option class="placeholder" selected disabled value="">Select munro microabcess level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">disappearance of the granular layer</label>
+            <select class="form-control" name="disappearance_of_the_granular_layer" placeholder="Enter disappearance of the granular layer level"
+                required>
+                <option class="placeholder" selected disabled value="">Select disappearance of the granular layer level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">spongiosis</label>
+            <select class="form-control" name="spongiosis" placeholder="Enter spongiosis level"
+                required>
+                <option class="placeholder" selected disabled value="">Select spongiosis level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">inflammatory monoluclear infiltrate</label>
+            <select class="form-control" type="number" name="inflammatory_monoluclear_inflitrate" placeholder="Enter inflammatory monoluclear infiltrate level"
+                required>
+                <option class="placeholder" selected disabled value="">Select inflammatory monoluclear infiltrate level</option>
+                <option value="0">
+                    Not Present
+                </option>
+                <option value="1">
+                    Mild Level
+                </option>
+                <option value="2">
+                    Moderate Level
+                </option>
+                <option value="3">
+                    Severe Level
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder="Enter your Age" min='1' max='100' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict skin disease" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

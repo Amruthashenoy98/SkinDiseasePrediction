@@ -38,7 +38,7 @@ class DataTransformation:
        'hyperkeratosis', 'parakeratosis', 'elongation_of_the_rete_ridges',
        'spongiform_pustule', 'munro_microabcess',
        'disappearance_of_the_granular_layer', 'spongiosis',
-       'inflammatory_monoluclear_inflitrate'
+       'inflammatory_monoluclear_inflitrate',
             ]
 
             num_pipeline= Pipeline(

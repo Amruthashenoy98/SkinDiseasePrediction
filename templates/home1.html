@@ -1,0 +1,133 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Skin Disease Predictor</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Skin Disease Predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Erythema</label>
+            <input class="form-control" type="number" name="erythema"
+                placeholder="Enter erythema level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">scaling</label>
+            <input class="form-control" type="number" name="scaling"
+                placeholder="Enter scaling level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">definite borders</label>
+            <input class="form-control" type="number" name="definite_borders"
+                placeholder="Enter definite definite borders level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">itching</label>
+            <input class="form-control" type="number" name="itching"
+                placeholder="Enter itching level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">koebner phenomenon</label>
+            <input class="form-control" type="number" name="koebner_phenomenon"
+                placeholder="Enter koebner phenomenon level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">follicular papules</label>
+            <input class="form-control" type="number" name="follicular_papules"
+                placeholder="Enter follicular papules level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">knee and elbow involvement</label>
+            <input class="form-control" type="number" name="knee_and_elbow_involvement"
+                placeholder="Enter knee and elbow involvement level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">scalp involvement</label>
+            <input class="form-control" type="number" name="scalp_involvement"
+                placeholder="Enter scalp involvement level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">family history</label>
+            <input class="form-control" type="number" name="family_history"
+                placeholder="Enter family history" min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">eosinophils in the infiltrate</label>
+            <input class="form-control" type="number" name="eosinophils_in_the_infiltrate"
+                placeholder="Enter eosinophils in the infiltrate level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PNL infiltrate</label>
+            <input class="form-control" type="number" name="PNL_infiltrate"
+                placeholder="Enter pnl infiltrate level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fibrosis of the papillary dermis</label>
+            <input class="form-control" type="number" name="fibrosis_of_the_papillary_dermis"
+                placeholder="Enter fibrosis of the papillary dermis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">exocytosis</label>
+            <input class="form-control" type="number" name="exocytosis"
+                placeholder="Enter exocytosis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">acanthosis</label>
+            <input class="form-control" type="number" name="acanthosis"
+                placeholder="Enter acanthosis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">hyperkeratosis</label>
+            <input class="form-control" type="number" name="hyperkeratosis"
+                placeholder="Enter hyperkeratosis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">parakeratosis</label>
+            <input class="form-control" type="number" name="parakeratosis"
+                placeholder="Enter parakeratosis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">elongation of the rete ridges</label>
+            <input class="form-control" type="number" name="elongation_of_the_rete_ridges"
+                placeholder="Enter elongation of the rete ridges level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">spongiform pustule</label>
+            <input class="form-control" type="number" name="spongiform_pustule"
+                placeholder="Enter spongiform_pustule level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">munro microabcess</label>
+            <input class="form-control" type="number" name="munro_microabcess"
+                placeholder="Enter munro microabcess level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">disappearance of the granular layer</label>
+            <input class="form-control" type="number" name="disappearance_of_the_granular_layer"
+                placeholder="Enter disappearance of the granular layer level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">spongiosis</label>
+            <input class="form-control" type="number" name="spongiosis"
+                placeholder="Enter spongiosis level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">inflammatory_monoluclear_inflitrate</label>
+            <input class="form-control" type="number" name="inflammatory_monoluclear_inflitrate"
+                placeholder="Enter inflammatory mononuclear infiltrate level" min='0' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder="Enter your Age" min='1' max='100' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict the skin disease" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
